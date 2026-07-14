@@ -493,6 +493,25 @@
       font-size: 0.88rem;
     }
 
+    .publication-subheading {
+      margin: 36px 0 17px;
+      padding-left: 12px;
+      border-left: 4px solid var(--zju-blue);
+      color: var(--zju-deep);
+      font-family: Georgia, "Times New Roman", "Songti SC", serif;
+      font-size: 1.34rem;
+      line-height: 1.3;
+    }
+
+    .publication-subheading.first {
+      margin-top: 0;
+    }
+
+    .publication-more {
+      margin-top: 23px;
+      text-align: center;
+    }
+
     .news-list {
       display: grid;
       gap: 16px;
@@ -695,7 +714,7 @@
         <a href="#news" data-en="News" data-zh="最新动态">News</a>
         <a href="#research" data-en="Research" data-zh="研究方向">Research</a>
         <a href="#education" data-en="Education" data-zh="教育经历">Education</a>
-        <a href="#publications" data-en="Publications" data-zh="代表成果">Publications</a>
+        <a href="#publications" data-en="Publications" data-zh="论文成果">Publications</a>
         <a href="#service" data-en="Awards & Service" data-zh="奖励与兼职">Awards &amp; Service</a>
 
         <div class="language-switch" aria-label="Language switch">
@@ -966,10 +985,10 @@
       </div>
     </section>
 
-    <section id="publications">
+    <section id="selected-publications">
       <div class="section-heading">
         <h2 data-en="Selected Publications" data-zh="代表性论文">Selected Publications</h2>
-        <span data-en="Selected first-author work" data-zh="部分第一作者成果">Selected first-author work</span>
+        <span data-en="Selected first-author journal papers" data-zh="部分第一作者期刊论文">Selected first-author journal papers</span>
       </div>
 
       <div class="publication-list">
@@ -977,7 +996,7 @@
           <div class="journal-tag">TMECH</div>
           <div>
             <h3>Sensorless Ground Reaction Force Observation with Disturbance Compensation in Heavy-Legged Robots</h3>
-            <p><strong>Shaoxun Liu</strong>, et al. · <em>IEEE/ASME Transactions on Mechatronics</em></p>
+            <p><strong>Shaoxun Liu</strong>, et al. · <em>IEEE/ASME Transactions on Mechatronics</em> · 2024</p>
           </div>
         </article>
 
@@ -985,7 +1004,7 @@
           <div class="journal-tag">MMT</div>
           <div>
             <h3>A Contact Sensor-Free Framework for Ground Reaction Force Observation in Heavy-Legged Robots Considering Unknown Loads</h3>
-            <p><strong>Shaoxun Liu</strong>, et al. · <em>Mechanism and Machine Theory</em></p>
+            <p><strong>Shaoxun Liu</strong>, et al. · <em>Mechanism and Machine Theory</em> · 2024</p>
           </div>
         </article>
 
@@ -993,23 +1012,23 @@
           <div class="journal-tag">ISA</div>
           <div>
             <h3>Servo Torque Fault Diagnosis Implementation for Heavy-Legged Robots Using Insufficient Information</h3>
-            <p><strong>Shaoxun Liu</strong>, et al. · <em>ISA Transactions</em></p>
+            <p><strong>Shaoxun Liu</strong>, et al. · <em>ISA Transactions</em> · 2024</p>
           </div>
         </article>
 
         <article class="publication">
           <div class="journal-tag">ISA</div>
           <div>
-            <h3>Smooth and Safe Stop: Fixed-Time Fault-Tolerant Control for Heavy-Legged Robots with Active Identification of Tolerance Capability</h3>
-            <p><strong>Shaoxun Liu</strong>, et al. · <em>ISA Transactions</em></p>
+            <h3>Smooth and Safe Stop: Fixed-Time Fault Tolerant Control for Heavy Legged Robot with Active Identification on Tolerance Capability</h3>
+            <p><strong>Shaoxun Liu</strong>, et al. · <em>ISA Transactions</em> · 2025</p>
           </div>
         </article>
 
         <article class="publication">
           <div class="journal-tag">CEP</div>
           <div>
-            <h3>Sensorless Servo Fault Status Assessing and Its Implementation for Fault-Tolerant Control in Heavy-Legged Robots with Velocity Sensor Failure</h3>
-            <p><strong>Shaoxun Liu</strong>, et al. · <em>Control Engineering Practice</em></p>
+            <h3>Evaluation of Servo Fault Status and Fault-Tolerant Control for Heavy-Legged Robots under Concurrent Velocity Sensor Failures</h3>
+            <p><strong>Shaoxun Liu</strong>, et al. · <em>Control Engineering Practice</em> · 2026</p>
           </div>
         </article>
 
@@ -1017,7 +1036,315 @@
           <div class="journal-tag">JRISK</div>
           <div>
             <h3>Bearing Fault Signal Detection and Prediction Based on an Improved Particle Filter Method</h3>
-            <p><strong>Shaoxun Liu</strong>, et al. · <em>Journal of Risk and Reliability</em></p>
+            <p><strong>Shaoxun Liu</strong>, et al. · <em>Journal of Risk and Reliability</em> · 2025</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="publication-more">
+        <a class="button secondary" href="#publications"
+           data-en="View All Publications" data-zh="查看全部论文">View All Publications</a>
+      </div>
+    </section>
+
+    <section id="publications">
+      <div class="section-heading">
+        <h2 data-en="Publications" data-zh="论文成果">Publications</h2>
+        <span data-en="Journal articles and conference papers" data-zh="期刊论文与会议论文">Journal articles and conference papers</span>
+      </div>
+
+      <h3 class="publication-subheading first"
+          data-en="Journal Articles" data-zh="期刊论文">Journal Articles</h3>
+      <div class="publication-list">
+        <article class="publication">
+          <div class="journal-tag">CEP</div>
+          <div>
+            <h3>Evaluation of Servo Fault Status and Fault-Tolerant Control for Heavy-Legged Robots under Concurrent Velocity Sensor Failures</h3>
+            <p><strong>Shaoxun Liu</strong>, et al. · <em>Control Engineering Practice</em> · 2026</p>
+          </div>
+        </article>
+
+        <article class="publication">
+          <div class="journal-tag">JES</div>
+          <div>
+            <h3>Towards Sustainable and Cost-Efficient Hub Motor Electric Vehicles: Energy Management Using Nonlinear Model Predictive Control for Hybrid Battery-Supercapacitor Systems</h3>
+            <p>Mohamed Abdullah, <strong>Shaoxun Liu</strong>, et al. · <em>Journal of Energy Storage</em> · 2026</p>
+          </div>
+        </article>
+
+        <article class="publication">
+          <div class="journal-tag">JAE</div>
+          <div>
+            <h3>On-Road Driving Risk Mitigation and Safety Assurance Control Framework for In-Wheel Motor Electric Vehicles</h3>
+            <p>Mohamed Abdullah, <strong>Shaoxun Liu</strong>, et al. · <em>Journal of Automobile Engineering</em> · 2026</p>
+          </div>
+        </article>
+
+        <article class="publication">
+          <div class="journal-tag">ENERGY</div>
+          <div>
+            <h3>Deep Reinforcement Learning-Based Optimal Decision-Making Framework for Eco-Driving in Connected Hub-Motor Electric Vehicles</h3>
+            <p>Mohamed Abdullah, <strong>Shaoxun Liu</strong>, et al. · <em>Energy</em> · 2025</p>
+          </div>
+        </article>
+
+        <article class="publication">
+          <div class="journal-tag">JFI</div>
+          <div>
+            <h3>Traction Control for Multi-Actuator Driven Vehicles: A Case Study of Wheel–Track Hybrid Vehicles</h3>
+            <p>Boyuan Li, <strong>Shaoxun Liu</strong>, et al. · <em>Journal of the Franklin Institute</em> · 2025</p>
+          </div>
+        </article>
+
+        <article class="publication">
+          <div class="journal-tag">ISA</div>
+          <div>
+            <h3>Smooth and Safe Stop: Fixed-Time Fault Tolerant Control for Heavy Legged Robot with Active Identification on Tolerance Capability</h3>
+            <p><strong>Shaoxun Liu</strong>, et al. · <em>ISA Transactions</em> · 2025</p>
+          </div>
+        </article>
+
+        <article class="publication">
+          <div class="journal-tag">JRISK</div>
+          <div>
+            <h3>Bearing Fault Signal Detection and Prediction Based on an Improved Particle Filter Method</h3>
+            <p><strong>Shaoxun Liu</strong>, et al. · <em>Journal of Risk and Reliability</em> · 2025</p>
+          </div>
+        </article>
+
+        <article class="publication">
+          <div class="journal-tag">JSCE</div>
+          <div>
+            <h3>Collaborative Control of the Knee-Wheeled Wheel-Legged Robot: Considering Actuators Characteristics</h3>
+            <p>Zheng Pan, <strong>Shaoxun Liu</strong>, et al. · <em>Journal of Systems and Control Engineering</em> · 2025</p>
+          </div>
+        </article>
+
+        <article class="publication">
+          <div class="journal-tag">JAE</div>
+          <div>
+            <h3>Explicit Solution to the Nonlinear Geometry of Double Wishbone Suspension by Decoupling Steering and Wheel Jumping DOF</h3>
+            <p>Zhihua Niu, <strong>Shaoxun Liu</strong>, et al. · <em>Journal of Automobile Engineering</em> · 2025</p>
+          </div>
+        </article>
+
+        <article class="publication">
+          <div class="journal-tag">TMAG</div>
+          <div>
+            <h3>Modeling of Hot Deformation Behavior of the Nd-Fe-B Permanent Magnet and Its Application in Forming of Magnetic Ring</h3>
+            <p>Junyou Yang, <strong>Shaoxun Liu</strong>, et al. · <em>IEEE Transactions on Magnetics</em> · 2025</p>
+          </div>
+        </article>
+
+        <article class="publication">
+          <div class="journal-tag">TMECH</div>
+          <div>
+            <h3>Sensorless Ground Reaction Force Observation with Disturbance Compensation in Heavy-Legged Robots</h3>
+            <p><strong>Shaoxun Liu</strong>, et al. · <em>IEEE/ASME Transactions on Mechatronics</em> · 2024</p>
+          </div>
+        </article>
+
+        <article class="publication">
+          <div class="journal-tag">MMT</div>
+          <div>
+            <h3>A Contact Sensor-Free Framework for Ground Reaction Force Observation in Heavy-Legged Robots Considering Unknown Loads</h3>
+            <p><strong>Shaoxun Liu</strong>, et al. · <em>Mechanism and Machine Theory</em> · 2024</p>
+          </div>
+        </article>
+
+        <article class="publication">
+          <div class="journal-tag">ISA</div>
+          <div>
+            <h3>Servo Torque Fault Diagnosis Implementation for Heavy-Legged Robots Using Insufficient Information</h3>
+            <p><strong>Shaoxun Liu</strong>, et al. · <em>ISA Transactions</em> · 2024</p>
+          </div>
+        </article>
+
+        <article class="publication">
+          <div class="journal-tag">JAE</div>
+          <div>
+            <h3>Distributed MPC-Based Posture Control for Knee-Wheeled Wheel-Legged Robots with Multi-Actuation</h3>
+            <p>Zheng Pan, <strong>Shaoxun Liu</strong>, et al. · <em>Journal of Automobile Engineering</em> · 2024</p>
+          </div>
+        </article>
+
+        <article class="publication">
+          <div class="journal-tag">MACHINES</div>
+          <div>
+            <h3>Integrated Control of a Wheel–Track Hybrid Vehicle Based on Adaptive Model Predictive Control</h3>
+            <p>Boyuan Li, <strong>Shaoxun Liu</strong>, et al. · <em>Machines</em> · 2024</p>
+          </div>
+        </article>
+
+        <article class="publication">
+          <div class="journal-tag">MACHINES</div>
+          <div>
+            <h3>Design of Active Posture Controller for Trailing-Arm Vehicle: Improving Path-Following and Handling Stability</h3>
+            <p>Zheng Pan, <strong>Shaoxun Liu</strong>, et al. · <em>Machines</em> · 2024</p>
+          </div>
+        </article>
+
+        <article class="publication">
+          <div class="journal-tag">HIT</div>
+          <div>
+            <h3>车用动力电池全生命周期寿命预测方法</h3>
+            <p>周雅夫，<strong>刘邵勋</strong>，等 · <em>哈尔滨工业大学学报</em> · 2022</p>
+          </div>
+        </article>
+
+        <article class="publication">
+          <div class="journal-tag">ENERGIES</div>
+          <div>
+            <h3>A Method for Battery Health Estimation Based on Charging Time Segment</h3>
+            <p><strong>Shaoxun Liu</strong>, et al. · <em>Energies</em> · 2021</p>
+          </div>
+        </article>
+
+        <article class="publication">
+          <div class="journal-tag">AUTO</div>
+          <div>
+            <h3>多输入电动汽车充电装置的设计</h3>
+            <p>周雅夫，<strong>刘邵勋</strong>，等 · <em>汽车实用技术</em> · 2020</p>
+          </div>
+        </article>
+      </div>
+
+      <h3 class="publication-subheading"
+          data-en="Conference Papers" data-zh="会议论文">Conference Papers</h3>
+      <div class="publication-list">
+        <article class="publication">
+          <div class="journal-tag">AMC</div>
+          <div>
+            <h3>Reinforcement Learning-Enabled Terrain Adaptation for Bipedal Wheeled-Legged Robots with Height Adjustment Capability</h3>
+            <p>Tianwei Qian, <strong>Shaoxun Liu</strong>, et al. · <em>IEEE International Conference on Advanced Motion Control</em> · 2026</p>
+          </div>
+        </article>
+
+        <article class="publication">
+          <div class="journal-tag">IROS</div>
+          <div>
+            <h3>Learning Robust and Flexible Locomotion of Wheel-Legged Quadruped Robots in Complex Terrains</h3>
+            <p>Shiyu Zhou, <strong>Shaoxun Liu</strong>, et al. · <em>IEEE/RSJ International Conference on Intelligent Robots and Systems</em> · 2025</p>
+          </div>
+        </article>
+
+        <article class="publication">
+          <div class="journal-tag">RCAE</div>
+          <div>
+            <h3>Sensorless Force/Motion Hybrid Control with Bilateral Force Perception in Heavy Legged Robot</h3>
+            <p>Shouyuan Chen, <strong>Shaoxun Liu</strong>, et al. · <em>International Conference on Robotics, Control and Automation Engineering</em> · 2025</p>
+          </div>
+        </article>
+
+        <article class="publication">
+          <div class="journal-tag">INDIN</div>
+          <div>
+            <h3>Dynamic Balancing Locomotion for Wheel-Legged Vehicle Navigating Uneven Terrain</h3>
+            <p>Shiyu Zhou, <strong>Shaoxun Liu</strong>, et al. · <em>IEEE International Conference on Industrial Informatics</em> · 2024</p>
+          </div>
+        </article>
+
+        <article class="publication">
+          <div class="journal-tag">INDIN</div>
+          <div>
+            <h3>Towards Secure E-Mobility: Cybersecurity of In-Wheel Motor Electric Vehicles Against Adversarial Attacks via Detection and Mitigation</h3>
+            <p>Mohamed Abdullah, <strong>Shaoxun Liu</strong>, et al. · <em>IEEE International Conference on Industrial Informatics</em> · 2024</p>
+          </div>
+        </article>
+
+        <article class="publication">
+          <div class="journal-tag">INDIN</div>
+          <div>
+            <h3>Emergency Brake and DYC Coordinated Control Strategy Based on Model Predictive Control</h3>
+            <p>Junhua Liu, <strong>Shaoxun Liu</strong>, et al. · <em>IEEE International Conference on Industrial Informatics</em> · 2024</p>
+          </div>
+        </article>
+
+        <article class="publication">
+          <div class="journal-tag">IROS</div>
+          <div>
+            <h3>Load Awareness: Sensorless Body Payload Sensing and Localization for Heavy Quadruped Robot</h3>
+            <p><strong>Shaoxun Liu</strong>, et al. · <em>IEEE/RSJ International Conference on Intelligent Robots and Systems</em> · 2023</p>
+          </div>
+        </article>
+
+        <article class="publication">
+          <div class="journal-tag">ICARM</div>
+          <div>
+            <h3>Decoupling Control for Heavy Quadruped Robot: A Hip-Based Optimal Virtual Force Distribution and Control Framework</h3>
+            <p><strong>Shaoxun Liu</strong>, et al. · <em>International Conference on Advanced Robotics and Mechatronics</em> · 2023</p>
+          </div>
+        </article>
+
+        <article class="publication">
+          <div class="journal-tag">ICARM</div>
+          <div>
+            <h3>Cascade Trajectory Optimization with Phase Duration Adaption and Control for Wheel-Legged Robots Overcoming High Obstacles</h3>
+            <p>Shiyu Zhou, <strong>Shaoxun Liu</strong>, et al. · <em>International Conference on Advanced Robotics and Mechatronics</em> · 2023</p>
+          </div>
+        </article>
+
+        <article class="publication">
+          <div class="journal-tag">ICCCR</div>
+          <div>
+            <h3>Collision Avoidance of Wheel-Legged Robots on Complex Topography Based on Vertical Artificial Potential Field Method</h3>
+            <p>Zheng Pan, <strong>Shaoxun Liu</strong>, et al. · <em>International Conference on Computer, Control and Robotics</em> · 2023</p>
+          </div>
+        </article>
+
+        <article class="publication">
+          <div class="journal-tag">ICET</div>
+          <div>
+            <h3>Estimation of Ground Posture Angle for Quadruped Robots Based on IMU</h3>
+            <p>Jiliang Wang, <strong>Shaoxun Liu</strong>, et al. · <em>International Conference on Electronics Technology</em> · 2023</p>
+          </div>
+        </article>
+
+        <article class="publication">
+          <div class="journal-tag">RCAE</div>
+          <div>
+            <h3>Optimal Time Control of Quadruped Robot Diagonal Gait Based on Half-Robot Model</h3>
+            <p>Zheng Pan, <strong>Shaoxun Liu</strong>, et al. · <em>International Conference on Robotics, Control and Automation Engineering</em> · 2023</p>
+          </div>
+        </article>
+
+        <article class="publication">
+          <div class="journal-tag">CVCI</div>
+          <div>
+            <h3>Logic-Based Motor-Battery Power Management Strategy for In-Wheel Motor Electric Vehicles</h3>
+            <p>Mohamed Abdullah, <strong>Shaoxun Liu</strong>, et al. · <em>CAA International Conference on Vehicular Control and Intelligence</em> · 2023</p>
+          </div>
+        </article>
+
+        <article class="publication">
+          <div class="journal-tag">RCAE</div>
+          <div>
+            <h3>Exploring the Effect of Pitching and Rolling Spine Angle for a Galloping Quadruped Robot via Trajectory Optimization</h3>
+            <p>Zhaopeng Lin, <strong>Shaoxun Liu</strong>, et al. · <em>International Conference on Robotics, Control and Automation Engineering</em> · 2023</p>
+          </div>
+        </article>
+
+        <article class="publication">
+          <div class="journal-tag">AIM</div>
+          <div>
+            <h3>A Dynamic Model for Skid Steering of Tracked Vehicles on Firm Ground</h3>
+            <p>Boyuan Li, <strong>Shaoxun Liu</strong>, et al. · <em>IEEE/ASME International Conference on Advanced Intelligent Mechatronics</em> · 2022</p>
+          </div>
+        </article>
+
+        <article class="publication">
+          <div class="journal-tag">AIM</div>
+          <div>
+            <h3>Sensorless Contact Force Observation with Friction Distinguishment in Heavy Legged Robot via PMSM Load Torque and IMU</h3>
+            <p><strong>Shaoxun Liu</strong>, et al. · <em>IEEE/ASME International Conference on Advanced Intelligent Mechatronics</em> · 2022</p>
+          </div>
+        </article>
+
+        <article class="publication">
+          <div class="journal-tag">HDIS</div>
+          <div>
+            <h3>Robot Manipulator Disturbance Observation and Servo-Fault Diagnosis without Speed Sensor</h3>
+            <p><strong>Shaoxun Liu</strong>, et al. · <em>International Conference on High Performance Big Data and Intelligent Systems</em> · 2022</p>
           </div>
         </article>
       </div>
