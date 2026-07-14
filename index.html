@@ -493,6 +493,39 @@
       font-size: 0.88rem;
     }
 
+    .news-list {
+      display: grid;
+      gap: 16px;
+    }
+
+    .news-item {
+      display: grid;
+      grid-template-columns: 105px minmax(0, 1fr);
+      gap: 22px;
+      padding: 20px 22px;
+      border-left: 4px solid var(--zju-blue);
+      border-radius: 0 12px 12px 0;
+      background: var(--soft);
+    }
+
+    .news-date {
+      color: var(--zju-blue);
+      font-weight: 800;
+      font-size: 0.9rem;
+    }
+
+    .news-content h3 {
+      margin: 0 0 5px;
+      color: var(--zju-deep);
+      font-size: 1rem;
+    }
+
+    .news-content p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
     .two-column-list {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -632,7 +665,8 @@
         gap: 2px;
       }
 
-      .publication {
+      .publication,
+      .news-item {
         grid-template-columns: 1fr;
         gap: 12px;
       }
@@ -658,6 +692,7 @@
 
       <div class="nav-links" id="navLinks">
         <a href="#about" data-en="About" data-zh="个人简介">About</a>
+        <a href="#news" data-en="News" data-zh="最新动态">News</a>
         <a href="#research" data-en="Research" data-zh="研究方向">Research</a>
         <a href="#education" data-en="Education" data-zh="教育经历">Education</a>
         <a href="#publications" data-en="Publications" data-zh="代表成果">Publications</a>
@@ -714,13 +749,6 @@
         <a href="mailto:liushaoxun@zju.edu.cn">liushaoxun@zju.edu.cn</a>
       </div>
       <div class="contact-item">
-        <strong data-en="Office" data-zh="办公地点">Office</strong>
-        <span data-en="Room 504, Industrial Control New Building, Yuquan Campus"
-              data-zh="浙江大学玉泉校区工控新楼504室">
-          Room 504, Industrial Control New Building, Yuquan Campus
-        </span>
-      </div>
-      <div class="contact-item">
         <strong data-en="Research Focus" data-zh="研究方向">Research Focus</strong>
         <span data-en="Control and Observation of Hybrid-Drive Platforms"
               data-zh="复合驱动平台控制及观测">
@@ -740,16 +768,29 @@
       <div class="about-grid">
         <div class="about-copy">
           <p
-            data-en="Shaoxun Liu is a Research Fellow with the College of Control Science and Engineering, Zhejiang University. He received the B.Eng. degree in Marine Engineering from Dalian Maritime University in 2017, the M.Eng. degree in Vehicle Engineering from Dalian University of Technology in 2020, and the Ph.D. degree in Mechanical Engineering from Shanghai Jiao Tong University in 2025. His research interests include heavy-duty wheel-legged robots, hybrid-drive mobile platforms, vehicle and robot dynamics, sensorless force estimation, disturbance observation, fault diagnosis, fault-tolerant control, and autonomous motion control."
-            data-zh="刘邵勋，博士，现为浙江大学控制科学与工程学院专职研究员。2017年获大连海事大学轮机工程专业学士学位，2020年获大连理工大学车辆工程专业硕士学位，2025年获上海交通大学机械工程专业博士学位。主要研究方向包括重载轮足机器人与复合驱动移动平台、车辆与机器人动力学、无传感器接触力估计、扰动观测、故障诊断与容错控制，以及无人平台自主运动控制。">
+            data-en="Shaoxun Liu is a Research Fellow with the College of Control Science and Engineering, Zhejiang University. He received the B.Eng. degree in Marine Engineering from Dalian Maritime University in 2017, the M.Eng. degree in Vehicle Engineering from Dalian University of Technology in 2020, and the Ph.D. degree in Mechanical Engineering from Shanghai Jiao Tong University in 2025. His academic training spans marine power systems, vehicle engineering, robot dynamics and intelligent control, providing him with an interdisciplinary background in mechanical systems, electrical actuation and control theory."
+            data-zh="刘邵勋，博士，现为浙江大学控制科学与工程学院专职研究员。2017年获大连海事大学轮机工程专业学士学位，2020年获大连理工大学车辆工程专业硕士学位，2025年获上海交通大学机械工程专业博士学位。其学习与研究经历覆盖船舶动力、车辆工程、机器人动力学与智能控制，形成了机械系统、电驱动执行与控制理论相结合的交叉研究背景。">
             Shaoxun Liu is a Research Fellow with the College of Control Science and Engineering,
             Zhejiang University. He received the B.Eng. degree in Marine Engineering from Dalian
             Maritime University in 2017, the M.Eng. degree in Vehicle Engineering from Dalian
             University of Technology in 2020, and the Ph.D. degree in Mechanical Engineering from
-            Shanghai Jiao Tong University in 2025. His research interests include heavy-duty
-            wheel-legged robots, hybrid-drive mobile platforms, vehicle and robot dynamics,
-            sensorless force estimation, disturbance observation, fault diagnosis, fault-tolerant
-            control, and autonomous motion control.
+            Shanghai Jiao Tong University in 2025. His academic training spans marine power systems,
+            vehicle engineering, robot dynamics and intelligent control, providing him with an
+            interdisciplinary background in mechanical systems, electrical actuation and control theory.
+          </p>
+          <p
+            data-en="His research focuses on the modeling, observation, control and system integration of heavy-duty embodied robotic platforms and autonomous ground vehicles. Particular interests include heavy-duty wheel-legged and closed-chain robots, hybrid-drive mobile platforms, sensorless ground-reaction-force estimation, payload and disturbance observation, servo fault diagnosis, fixed-time and fault-tolerant control, distributed-drive vehicle control, and trajectory tracking under uncertain loads and complex terrain conditions. His work emphasizes the complete research chain from dynamic modeling and controller design to simulation, test-rig validation and physical-platform experiments. He currently serves as an Associate Editor of the International Journal of Electric and Hybrid Vehicles and as a reviewer for several international journals in robotics, control and mechanical systems."
+            data-zh="其研究主要面向重载具身机器人平台与无人地面车辆的建模、观测、控制及系统集成，重点开展重载轮足与闭链机器人、复合驱动移动平台、无传感器地面接触力估计、负载与扰动观测、伺服故障诊断、固定时间与容错控制、分布式驱动车辆控制，以及未知负载和复杂地形条件下的轨迹跟踪研究。相关工作注重从动力学建模、控制器设计到仿真验证、台架试验和实物平台测试的完整技术链条。现任 International Journal of Electric and Hybrid Vehicles 副编辑，并担任多个机器人、控制与机械系统领域国际期刊审稿人。">
+            His research focuses on the modeling, observation, control and system integration of
+            heavy-duty embodied robotic platforms and autonomous ground vehicles. Particular interests
+            include heavy-duty wheel-legged and closed-chain robots, hybrid-drive mobile platforms,
+            sensorless ground-reaction-force estimation, payload and disturbance observation, servo
+            fault diagnosis, fixed-time and fault-tolerant control, distributed-drive vehicle control,
+            and trajectory tracking under uncertain loads and complex terrain conditions. His work
+            emphasizes the complete research chain from dynamic modeling and controller design to
+            simulation, test-rig validation and physical-platform experiments. He currently serves as
+            an Associate Editor of the International Journal of Electric and Hybrid Vehicles and as a
+            reviewer for several international journals in robotics, control and mechanical systems.
           </p>
         </div>
 
@@ -762,6 +803,59 @@
             platforms operating under strong coupling, uncertain loads and actuator faults.
           </p>
         </aside>
+      </div>
+    </section>
+
+    <section id="news">
+      <div class="section-heading">
+        <h2 data-en="News" data-zh="最新动态">News</h2>
+        <span data-en="Recent academic and professional updates" data-zh="近期学术与工作动态">Recent academic and professional updates</span>
+      </div>
+
+      <div class="news-list">
+        <article class="news-item">
+          <div class="news-date">2026</div>
+          <div class="news-content">
+            <h3 data-en="Editorial Appointment" data-zh="期刊编辑任职">Editorial Appointment</h3>
+            <p data-en="Appointed Associate Editor of the International Journal of Electric and Hybrid Vehicles."
+               data-zh="受聘担任 International Journal of Electric and Hybrid Vehicles 副编辑。">
+              Appointed Associate Editor of the International Journal of Electric and Hybrid Vehicles.
+            </p>
+          </div>
+        </article>
+
+        <article class="news-item">
+          <div class="news-date">2025</div>
+          <div class="news-content">
+            <h3 data-en="Joined Zhejiang University" data-zh="加入浙江大学">Joined Zhejiang University</h3>
+            <p data-en="Joined the College of Control Science and Engineering, Zhejiang University, as a Research Fellow."
+               data-zh="加入浙江大学控制科学与工程学院，任专职研究员。">
+              Joined the College of Control Science and Engineering, Zhejiang University, as a Research Fellow.
+            </p>
+          </div>
+        </article>
+
+        <article class="news-item">
+          <div class="news-date">2024</div>
+          <div class="news-content">
+            <h3 data-en="Best Presentation Award" data-zh="最佳报告奖">Best Presentation Award</h3>
+            <p data-en="Received the Best Presentation Award at the 22nd IEEE International Conference on Industrial Informatics (INDIN 2024)."
+               data-zh="在第22届 IEEE 工业信息学国际会议（INDIN 2024）获得最佳报告奖。">
+              Received the Best Presentation Award at the 22nd IEEE International Conference on Industrial Informatics (INDIN 2024).
+            </p>
+          </div>
+        </article>
+
+        <article class="news-item">
+          <div class="news-date">2022</div>
+          <div class="news-content">
+            <h3 data-en="Best Student Paper Award" data-zh="最佳学生论文奖">Best Student Paper Award</h3>
+            <p data-en="Received the Best Student Paper Award at the IEEE International Conference on High Performance Big Data and Intelligent Systems (HDIS 2022)."
+               data-zh="在 IEEE 高性能大数据与智能系统国际会议（HDIS 2022）获得最佳学生论文奖。">
+              Received the Best Student Paper Award at the IEEE International Conference on High Performance Big Data and Intelligent Systems (HDIS 2022).
+            </p>
+          </div>
+        </article>
       </div>
     </section>
 
@@ -912,10 +1006,10 @@
         </article>
 
         <article class="publication">
-          <div class="journal-tag">TII</div>
+          <div class="journal-tag">CEP</div>
           <div>
             <h3>Sensorless Servo Fault Status Assessing and Its Implementation for Fault-Tolerant Control in Heavy-Legged Robots with Velocity Sensor Failure</h3>
-            <p><strong>Shaoxun Liu</strong>, et al. · <em>IEEE Transactions on Industrial Informatics</em></p>
+            <p><strong>Shaoxun Liu</strong>, et al. · <em>Control Engineering Practice</em></p>
           </div>
         </article>
 
@@ -951,6 +1045,8 @@
         <div class="list-panel">
           <h3 data-en="Academic Service" data-zh="学术兼职">Academic Service</h3>
           <ul>
+            <li data-en="Associate Editor, International Journal of Electric and Hybrid Vehicles"
+                data-zh="International Journal of Electric and Hybrid Vehicles 副编辑">Associate Editor, International Journal of Electric and Hybrid Vehicles</li>
             <li data-en="Reviewer for IEEE Robotics and Automation Letters"
                 data-zh="IEEE Robotics and Automation Letters 审稿人">Reviewer for IEEE Robotics and Automation Letters</li>
             <li data-en="Reviewer for ISA Transactions"
@@ -966,8 +1062,7 @@
   </main>
 
   <footer>
-    <span>© <span id="year"></span> Shaoxun Liu · </span>
-    <span data-en="Hosted with GitHub Pages" data-zh="由 GitHub Pages 托管">Hosted with GitHub Pages</span>
+    <span>© <span id="year"></span> Shaoxun Liu</span>
   </footer>
 
   <script>
