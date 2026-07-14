@@ -1,85 +1,1008 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shaoxun Liu</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Academic homepage of Shaoxun Liu, Research Fellow at Zhejiang University.">
+  <meta name="author" content="Shaoxun Liu">
+  <title>Shaoxun Liu | Zhejiang University</title>
 
-    <style>
-        body {
-            max-width: 900px;
-            margin: 50px auto;
-            padding: 0 25px;
-            font-family: Arial, Helvetica, sans-serif;
-            line-height: 1.7;
-            color: #333;
-        }
+  <style>
+    :root {
+      --zju-blue: #0a4b8f;
+      --zju-deep: #073568;
+      --accent: #1677c8;
+      --ink: #1f2937;
+      --muted: #607086;
+      --line: #dfe6ee;
+      --soft: #f5f8fc;
+      --white: #ffffff;
+      --shadow: 0 12px 35px rgba(23, 54, 93, 0.10);
+      --radius: 16px;
+      --max-width: 1160px;
+    }
 
-        h1, h2 {
-            color: #17365d;
-        }
+    * {
+      box-sizing: border-box;
+    }
 
-        h2 {
-            margin-top: 35px;
-            border-bottom: 1px solid #ccc;
-            padding-bottom: 6px;
-        }
+    html {
+      scroll-behavior: smooth;
+    }
 
-        a {
-            color: #1a5f9e;
-            text-decoration: none;
-        }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--white);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue",
+        Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+      line-height: 1.72;
+    }
 
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    a {
+      color: var(--zju-blue);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--accent);
+    }
+
+    .top-rule {
+      height: 5px;
+      background: linear-gradient(90deg, var(--zju-deep), var(--accent));
+    }
+
+    .nav-shell {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(10px);
+    }
+
+    .nav {
+      width: min(var(--max-width), calc(100% - 40px));
+      min-height: 70px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      white-space: nowrap;
+    }
+
+    .brand strong {
+      color: var(--zju-deep);
+      font-size: 1.12rem;
+      letter-spacing: 0.01em;
+    }
+
+    .brand span {
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 24px;
+      font-size: 0.94rem;
+    }
+
+    .nav-links a {
+      color: #344255;
+      font-weight: 600;
+    }
+
+    .nav-links a:hover {
+      color: var(--zju-blue);
+    }
+
+    .language-switch {
+      display: inline-flex;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      overflow: hidden;
+      background: var(--white);
+    }
+
+    .language-switch button {
+      border: 0;
+      background: transparent;
+      color: var(--muted);
+      padding: 7px 11px;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 0.8rem;
+    }
+
+    .language-switch button.active {
+      color: var(--white);
+      background: var(--zju-blue);
+    }
+
+    .hero {
+      background:
+        radial-gradient(circle at 90% 8%, rgba(22, 119, 200, 0.14), transparent 30%),
+        linear-gradient(180deg, #f5f9fe 0%, #ffffff 100%);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero-inner {
+      width: min(var(--max-width), calc(100% - 40px));
+      margin: 0 auto;
+      padding: 74px 0 62px;
+      display: grid;
+      grid-template-columns: 230px minmax(0, 1fr);
+      align-items: center;
+      gap: 54px;
+    }
+
+    .portrait-wrap {
+      position: relative;
+    }
+
+    .portrait {
+      width: 220px;
+      height: 280px;
+      display: block;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 12px;
+      border: 7px solid var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .portrait-wrap::after {
+      content: "";
+      position: absolute;
+      right: -10px;
+      bottom: -10px;
+      width: 72px;
+      height: 72px;
+      border-right: 5px solid var(--accent);
+      border-bottom: 5px solid var(--accent);
+      border-radius: 0 0 15px 0;
+      z-index: -1;
+    }
+
+    .eyebrow {
+      margin: 0 0 8px;
+      color: var(--zju-blue);
+      font-size: 0.92rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      color: var(--zju-deep);
+      font-family: Georgia, "Times New Roman", "Songti SC", serif;
+      font-size: clamp(2.55rem, 5vw, 4.35rem);
+      line-height: 1.08;
+      letter-spacing: -0.035em;
+    }
+
+    .cn-name {
+      margin-left: 12px;
+      color: var(--muted);
+      font-family: "Songti SC", "STSong", serif;
+      font-size: 0.46em;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+    }
+
+    .position {
+      margin: 18px 0 4px;
+      color: #26384d;
+      font-size: 1.18rem;
+      font-weight: 700;
+    }
+
+    .affiliation {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.02rem;
+    }
+
+    .hero-summary {
+      max-width: 780px;
+      margin: 23px 0 0;
+      color: #42536a;
+      font-size: 1.02rem;
+    }
+
+    .quick-links {
+      margin-top: 27px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 9px 16px;
+      border: 1px solid var(--zju-blue);
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 8px 18px rgba(10, 75, 143, 0.15);
+    }
+
+    .button.primary {
+      color: var(--white);
+      background: var(--zju-blue);
+    }
+
+    .button.secondary {
+      color: var(--zju-blue);
+      background: var(--white);
+    }
+
+    .contact-strip {
+      background: var(--zju-deep);
+      color: var(--white);
+    }
+
+    .contact-inner {
+      width: min(var(--max-width), calc(100% - 40px));
+      margin: 0 auto;
+      padding: 17px 0;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .contact-item {
+      min-width: 0;
+      color: rgba(255, 255, 255, 0.92);
+      font-size: 0.9rem;
+    }
+
+    .contact-item strong {
+      display: block;
+      margin-bottom: 1px;
+      color: #bcdcff;
+      font-size: 0.77rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .contact-item a {
+      color: var(--white);
+      word-break: break-word;
+    }
+
+    main {
+      width: min(var(--max-width), calc(100% - 40px));
+      margin: 0 auto;
+      padding: 64px 0 86px;
+    }
+
+    section {
+      scroll-margin-top: 92px;
+      margin-bottom: 72px;
+    }
+
+    .section-heading {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 27px;
+      padding-bottom: 13px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section-heading h2 {
+      margin: 0;
+      color: var(--zju-deep);
+      font-family: Georgia, "Times New Roman", "Songti SC", serif;
+      font-size: 2rem;
+      line-height: 1.2;
+    }
+
+    .section-heading span {
+      color: var(--muted);
+      font-size: 0.86rem;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.7fr) minmax(270px, 0.8fr);
+      gap: 42px;
+    }
+
+    .about-copy p {
+      margin-top: 0;
+      color: #405168;
+      font-size: 1.02rem;
+      text-align: justify;
+    }
+
+    .focus-box {
+      padding: 25px;
+      border: 1px solid var(--line);
+      border-left: 5px solid var(--zju-blue);
+      border-radius: 10px;
+      background: var(--soft);
+    }
+
+    .focus-box h3 {
+      margin: 0 0 10px;
+      color: var(--zju-deep);
+      font-size: 1rem;
+    }
+
+    .focus-box p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      padding: 26px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--white);
+      box-shadow: 0 5px 18px rgba(31, 52, 76, 0.045);
+    }
+
+    .card-index {
+      display: inline-flex;
+      width: 34px;
+      height: 34px;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 14px;
+      border-radius: 8px;
+      color: var(--white);
+      background: var(--zju-blue);
+      font-weight: 800;
+      font-size: 0.84rem;
+    }
+
+    .card h3 {
+      margin: 0 0 9px;
+      color: var(--zju-deep);
+      font-size: 1.08rem;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .timeline {
+      position: relative;
+      padding-left: 28px;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 6px;
+      top: 8px;
+      bottom: 8px;
+      width: 2px;
+      background: #c9d8e8;
+    }
+
+    .timeline-item {
+      position: relative;
+      display: grid;
+      grid-template-columns: 145px minmax(0, 1fr);
+      gap: 22px;
+      margin-bottom: 27px;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -28px;
+      top: 8px;
+      width: 14px;
+      height: 14px;
+      border: 3px solid var(--zju-blue);
+      border-radius: 50%;
+      background: var(--white);
+    }
+
+    .timeline-date {
+      color: var(--zju-blue);
+      font-weight: 800;
+      font-size: 0.9rem;
+    }
+
+    .timeline-content h3 {
+      margin: 0;
+      color: var(--zju-deep);
+      font-size: 1.02rem;
+    }
+
+    .timeline-content p {
+      margin: 5px 0 0;
+      color: var(--muted);
+      font-size: 0.93rem;
+    }
+
+    .publication-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .publication {
+      display: grid;
+      grid-template-columns: 92px minmax(0, 1fr);
+      gap: 20px;
+      padding: 21px 22px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: #fff;
+    }
+
+    .journal-tag {
+      align-self: start;
+      padding: 7px 8px;
+      border-radius: 7px;
+      color: var(--zju-blue);
+      background: #eaf3fc;
+      font-size: 0.73rem;
+      font-weight: 900;
+      text-align: center;
+      letter-spacing: 0.03em;
+    }
+
+    .publication h3 {
+      margin: 0 0 6px;
+      color: #24384f;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1.5;
+    }
+
+    .publication p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .two-column-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .list-panel {
+      padding: 25px;
+      border: 1px solid var(--line);
+      border-radius: 13px;
+      background: var(--soft);
+    }
+
+    .list-panel h3 {
+      margin: 0 0 13px;
+      color: var(--zju-deep);
+      font-size: 1.05rem;
+    }
+
+    .list-panel ul {
+      margin: 0;
+      padding-left: 19px;
+      color: #4b5d72;
+    }
+
+    .list-panel li {
+      margin-bottom: 9px;
+    }
+
+    footer {
+      padding: 32px 20px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      background: var(--soft);
+      text-align: center;
+      font-size: 0.86rem;
+    }
+
+    .menu-toggle {
+      display: none;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--white);
+      padding: 8px 10px;
+      color: var(--zju-deep);
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    @media (max-width: 900px) {
+      .menu-toggle {
+        display: inline-flex;
+      }
+
+      .nav {
+        position: relative;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 62px;
+        right: 0;
+        width: min(340px, calc(100vw - 40px));
+        padding: 18px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        background: var(--white);
+        box-shadow: var(--shadow);
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .language-switch {
+        align-self: flex-start;
+      }
+
+      .hero-inner {
+        grid-template-columns: 190px minmax(0, 1fr);
+        gap: 35px;
+      }
+
+      .portrait {
+        width: 185px;
+        height: 235px;
+      }
+
+      .contact-inner,
+      .cards,
+      .about-grid,
+      .two-column-list {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .brand span {
+        display: none;
+      }
+
+      .hero-inner {
+        padding: 48px 0 44px;
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .portrait-wrap {
+        justify-self: center;
+      }
+
+      .portrait {
+        width: 175px;
+        height: 220px;
+      }
+
+      .quick-links {
+        justify-content: center;
+      }
+
+      .contact-inner {
+        gap: 13px;
+      }
+
+      .section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      .timeline-item {
+        grid-template-columns: 1fr;
+        gap: 2px;
+      }
+
+      .publication {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .journal-tag {
+        justify-self: start;
+      }
+    }
+  </style>
 </head>
 
 <body>
+  <div class="top-rule"></div>
 
-    <h1>Shaoxun Liu, Ph.D.</h1>
+  <header class="nav-shell">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="#top">
+        <strong>Shaoxun Liu</strong>
+        <span data-en="Academic Homepage" data-zh="个人学术主页">Academic Homepage</span>
+      </a>
 
-    <p>
-        Research Fellow<br>
-        College of Control Science and Engineering<br>
-        Zhejiang University
-    </p>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
 
-    <p>
-        Email:
-        <a href="mailto:liushaoxunsjtu@gmail.com">
-            liushaoxunsjtu@gmail.com
-        </a>
-    </p>
+      <div class="nav-links" id="navLinks">
+        <a href="#about" data-en="About" data-zh="个人简介">About</a>
+        <a href="#research" data-en="Research" data-zh="研究方向">Research</a>
+        <a href="#education" data-en="Education" data-zh="教育经历">Education</a>
+        <a href="#publications" data-en="Publications" data-zh="代表成果">Publications</a>
+        <a href="#service" data-en="Awards & Service" data-zh="奖励与兼职">Awards &amp; Service</a>
 
-    <h2>Biography</h2>
+        <div class="language-switch" aria-label="Language switch">
+          <button type="button" class="active" data-lang="en">EN</button>
+          <button type="button" data-lang="zh">中文</button>
+        </div>
+      </div>
+    </nav>
+  </header>
 
-    <p>
-        Shaoxun Liu is currently a Research Fellow with the College of
-        Control Science and Engineering, Zhejiang University.
-        His research interests include heavy-duty wheel-legged robots,
-        vehicle dynamics and control, fault-tolerant control,
-        force estimation, and autonomous unmanned systems.
-    </p>
+  <div id="top"></div>
 
-    <h2>Research Interests</h2>
+  <section class="hero" aria-labelledby="page-title">
+    <div class="hero-inner">
+      <div class="portrait-wrap">
+        <img class="portrait" src="assets/profile.jpg" alt="Portrait of Shaoxun Liu">
+      </div>
 
-    <ul>
-        <li>Heavy-duty wheel-legged robotic systems</li>
-        <li>Vehicle dynamics and motion control</li>
-        <li>Fault diagnosis and fault-tolerant control</li>
-        <li>State, force, and disturbance estimation</li>
-        <li>Autonomous unmanned systems</li>
-    </ul>
+      <div>
+        <p class="eyebrow" data-en="Zhejiang University" data-zh="浙江大学">Zhejiang University</p>
+        <h1 id="page-title">Shaoxun Liu <span class="cn-name">刘邵勋</span></h1>
+        <p class="position" data-en="Research Fellow" data-zh="专职研究员">Research Fellow</p>
+        <p class="affiliation"
+           data-en="College of Control Science and Engineering, Zhejiang University"
+           data-zh="浙江大学控制科学与工程学院">
+          College of Control Science and Engineering, Zhejiang University
+        </p>
 
-    <h2>Selected Publications</h2>
+        <p class="hero-summary"
+           data-en="My research focuses on heavy-duty hybrid-drive and wheel-legged robotic systems, sensorless force and state observation, disturbance rejection, fault diagnosis and fault-tolerant control, as well as motion control of autonomous unmanned platforms."
+           data-zh="主要从事重载复合驱动与轮足机器人、无传感器力与状态观测、抗扰控制、故障诊断与容错控制，以及无人平台运动控制等方面的研究。">
+          My research focuses on heavy-duty hybrid-drive and wheel-legged robotic systems,
+          sensorless force and state observation, disturbance rejection, fault diagnosis and
+          fault-tolerant control, as well as motion control of autonomous unmanned platforms.
+        </p>
 
-    <p>
-        <strong>Shaoxun Liu</strong>, et al.,
-        “Ground Reaction Force Estimation for Heavy-Duty Legged Robots,”
-        <em>IEEE/ASME Transactions on Mechatronics</em>, 2024.
-    </p>
+        <div class="quick-links">
+          <a class="button primary" href="mailto:liushaoxun@zju.edu.cn"
+             data-en="Email Me" data-zh="发送邮件">Email Me</a>
+          <a class="button secondary" href="https://person.zju.edu.cn/shaoxun" target="_blank" rel="noopener"
+             data-en="ZJU Profile" data-zh="浙大主页">ZJU Profile</a>
+          <a class="button secondary" href="https://github.com/Sxliu818" target="_blank" rel="noopener"
+             data-en="GitHub" data-zh="GitHub">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <div class="contact-strip">
+    <div class="contact-inner">
+      <div class="contact-item">
+        <strong data-en="Email" data-zh="邮箱">Email</strong>
+        <a href="mailto:liushaoxun@zju.edu.cn">liushaoxun@zju.edu.cn</a>
+      </div>
+      <div class="contact-item">
+        <strong data-en="Office" data-zh="办公地点">Office</strong>
+        <span data-en="Room 504, Industrial Control New Building, Yuquan Campus"
+              data-zh="浙江大学玉泉校区工控新楼504室">
+          Room 504, Industrial Control New Building, Yuquan Campus
+        </span>
+      </div>
+      <div class="contact-item">
+        <strong data-en="Research Focus" data-zh="研究方向">Research Focus</strong>
+        <span data-en="Control and Observation of Hybrid-Drive Platforms"
+              data-zh="复合驱动平台控制及观测">
+          Control and Observation of Hybrid-Drive Platforms
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <section id="about">
+      <div class="section-heading">
+        <h2 data-en="Biography" data-zh="个人简介">Biography</h2>
+        <span data-en="Research profile" data-zh="研究概况">Research profile</span>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-copy">
+          <p
+            data-en="Shaoxun Liu is a Research Fellow with the College of Control Science and Engineering, Zhejiang University. He received the B.Eng. degree in Marine Engineering from Dalian Maritime University in 2017, the M.Eng. degree in Vehicle Engineering from Dalian University of Technology in 2020, and the Ph.D. degree in Mechanical Engineering from Shanghai Jiao Tong University in 2025. His research interests include heavy-duty wheel-legged robots, hybrid-drive mobile platforms, vehicle and robot dynamics, sensorless force estimation, disturbance observation, fault diagnosis, fault-tolerant control, and autonomous motion control."
+            data-zh="刘邵勋，博士，现为浙江大学控制科学与工程学院专职研究员。2017年获大连海事大学轮机工程专业学士学位，2020年获大连理工大学车辆工程专业硕士学位，2025年获上海交通大学机械工程专业博士学位。主要研究方向包括重载轮足机器人与复合驱动移动平台、车辆与机器人动力学、无传感器接触力估计、扰动观测、故障诊断与容错控制，以及无人平台自主运动控制。">
+            Shaoxun Liu is a Research Fellow with the College of Control Science and Engineering,
+            Zhejiang University. He received the B.Eng. degree in Marine Engineering from Dalian
+            Maritime University in 2017, the M.Eng. degree in Vehicle Engineering from Dalian
+            University of Technology in 2020, and the Ph.D. degree in Mechanical Engineering from
+            Shanghai Jiao Tong University in 2025. His research interests include heavy-duty
+            wheel-legged robots, hybrid-drive mobile platforms, vehicle and robot dynamics,
+            sensorless force estimation, disturbance observation, fault diagnosis, fault-tolerant
+            control, and autonomous motion control.
+          </p>
+        </div>
+
+        <aside class="focus-box">
+          <h3 data-en="Current Research Theme" data-zh="当前研究主题">Current Research Theme</h3>
+          <p
+            data-en="Unified modeling, observation, control and verification for heavy-duty embodied robotic platforms operating under strong coupling, uncertain loads and actuator faults."
+            data-zh="面向强耦合、未知负载与执行器故障条件下的重载具身平台，开展统一建模、状态与力观测、运动控制及系统验证研究。">
+            Unified modeling, observation, control and verification for heavy-duty embodied robotic
+            platforms operating under strong coupling, uncertain loads and actuator faults.
+          </p>
+        </aside>
+      </div>
+    </section>
+
+    <section id="research">
+      <div class="section-heading">
+        <h2 data-en="Research Interests" data-zh="研究方向">Research Interests</h2>
+        <span data-en="Four connected research themes" data-zh="四项相互关联的研究主题">Four connected research themes</span>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <span class="card-index">01</span>
+          <h3 data-en="Heavy-Duty Hybrid-Drive Robotics" data-zh="重载复合驱动机器人">Heavy-Duty Hybrid-Drive Robotics</h3>
+          <p
+            data-en="Dynamic modeling, actuation coordination and motion control of wheel-legged, closed-chain and multi-actuated robotic platforms."
+            data-zh="开展轮足式、闭链式与多执行器重载机器人平台的动力学建模、驱动协调与运动控制研究。">
+            Dynamic modeling, actuation coordination and motion control of wheel-legged,
+            closed-chain and multi-actuated robotic platforms.
+          </p>
+        </article>
+
+        <article class="card">
+          <span class="card-index">02</span>
+          <h3 data-en="Sensorless Force and State Estimation" data-zh="无传感器力与状态观测">Sensorless Force and State Estimation</h3>
+          <p
+            data-en="Ground-reaction-force estimation, payload sensing, disturbance observation and state reconstruction using actuator and inertial information."
+            data-zh="利用执行器信息与惯性信息实现地面接触力估计、负载感知、扰动观测与系统状态重构。">
+            Ground-reaction-force estimation, payload sensing, disturbance observation and state
+            reconstruction using actuator and inertial information.
+          </p>
+        </article>
+
+        <article class="card">
+          <span class="card-index">03</span>
+          <h3 data-en="Fault Diagnosis and Fault-Tolerant Control" data-zh="故障诊断与容错控制">Fault Diagnosis and Fault-Tolerant Control</h3>
+          <p
+            data-en="Servo-fault diagnosis, tolerance capability assessment, proactive trajectory modification and safe degradation under actuator failures."
+            data-zh="研究伺服故障诊断、容错能力评估、主动轨迹修正以及执行器故障条件下的安全降级控制。">
+            Servo-fault diagnosis, tolerance capability assessment, proactive trajectory modification
+            and safe degradation under actuator failures.
+          </p>
+        </article>
+
+        <article class="card">
+          <span class="card-index">04</span>
+          <h3 data-en="Vehicle Dynamics and Autonomous Control" data-zh="车辆动力学与自主控制">Vehicle Dynamics and Autonomous Control</h3>
+          <p
+            data-en="Trajectory tracking, stability control, distributed-drive coordination and robust motion control of autonomous ground vehicles."
+            data-zh="开展无人地面车辆的轨迹跟踪、稳定性控制、分布式驱动协调与鲁棒运动控制研究。">
+            Trajectory tracking, stability control, distributed-drive coordination and robust motion
+            control of autonomous ground vehicles.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="section-heading">
+        <h2 data-en="Education and Experience" data-zh="教育与科研经历">Education and Experience</h2>
+        <span data-en="Academic training and major projects" data-zh="学术训练与主要项目">Academic training and major projects</span>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-date" data-en="Current" data-zh="现今">Current</div>
+          <div class="timeline-content">
+            <h3 data-en="Zhejiang University" data-zh="浙江大学">Zhejiang University</h3>
+            <p data-en="Research Fellow, College of Control Science and Engineering"
+               data-zh="控制科学与工程学院，专职研究员">
+              Research Fellow, College of Control Science and Engineering
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">2021–2025</div>
+          <div class="timeline-content">
+            <h3 data-en="Shanghai Jiao Tong University" data-zh="上海交通大学">Shanghai Jiao Tong University</h3>
+            <p data-en="Ph.D. in Mechanical Engineering; research on sensorless force observation and control of heavy-duty legged robots"
+               data-zh="机械工程博士；重载足式机器人无传感器接触力观测与控制">
+              Ph.D. in Mechanical Engineering; research on sensorless force observation and control
+              of heavy-duty legged robots
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">2017–2020</div>
+          <div class="timeline-content">
+            <h3 data-en="Dalian University of Technology" data-zh="大连理工大学">Dalian University of Technology</h3>
+            <p data-en="M.Eng. in Vehicle Engineering; fuel-cell DC/DC control and battery health prediction"
+               data-zh="车辆工程硕士；燃料电池DC/DC控制与电池健康状态预测">
+              M.Eng. in Vehicle Engineering; fuel-cell DC/DC control and battery health prediction
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">2013–2017</div>
+          <div class="timeline-content">
+            <h3 data-en="Dalian Maritime University" data-zh="大连海事大学">Dalian Maritime University</h3>
+            <p data-en="B.Eng. in Marine Engineering"
+               data-zh="轮机工程学士">
+              B.Eng. in Marine Engineering
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="publications">
+      <div class="section-heading">
+        <h2 data-en="Selected Publications" data-zh="代表性论文">Selected Publications</h2>
+        <span data-en="Selected first-author work" data-zh="部分第一作者成果">Selected first-author work</span>
+      </div>
+
+      <div class="publication-list">
+        <article class="publication">
+          <div class="journal-tag">TMECH</div>
+          <div>
+            <h3>Sensorless Ground Reaction Force Observation with Disturbance Compensation in Heavy-Legged Robots</h3>
+            <p><strong>Shaoxun Liu</strong>, et al. · <em>IEEE/ASME Transactions on Mechatronics</em></p>
+          </div>
+        </article>
+
+        <article class="publication">
+          <div class="journal-tag">MMT</div>
+          <div>
+            <h3>A Contact Sensor-Free Framework for Ground Reaction Force Observation in Heavy-Legged Robots Considering Unknown Loads</h3>
+            <p><strong>Shaoxun Liu</strong>, et al. · <em>Mechanism and Machine Theory</em></p>
+          </div>
+        </article>
+
+        <article class="publication">
+          <div class="journal-tag">ISA</div>
+          <div>
+            <h3>Servo Torque Fault Diagnosis Implementation for Heavy-Legged Robots Using Insufficient Information</h3>
+            <p><strong>Shaoxun Liu</strong>, et al. · <em>ISA Transactions</em></p>
+          </div>
+        </article>
+
+        <article class="publication">
+          <div class="journal-tag">ISA</div>
+          <div>
+            <h3>Smooth and Safe Stop: Fixed-Time Fault-Tolerant Control for Heavy-Legged Robots with Active Identification of Tolerance Capability</h3>
+            <p><strong>Shaoxun Liu</strong>, et al. · <em>ISA Transactions</em></p>
+          </div>
+        </article>
+
+        <article class="publication">
+          <div class="journal-tag">TII</div>
+          <div>
+            <h3>Sensorless Servo Fault Status Assessing and Its Implementation for Fault-Tolerant Control in Heavy-Legged Robots with Velocity Sensor Failure</h3>
+            <p><strong>Shaoxun Liu</strong>, et al. · <em>IEEE Transactions on Industrial Informatics</em></p>
+          </div>
+        </article>
+
+        <article class="publication">
+          <div class="journal-tag">JRISK</div>
+          <div>
+            <h3>Bearing Fault Signal Detection and Prediction Based on an Improved Particle Filter Method</h3>
+            <p><strong>Shaoxun Liu</strong>, et al. · <em>Journal of Risk and Reliability</em></p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="service">
+      <div class="section-heading">
+        <h2 data-en="Awards and Academic Service" data-zh="奖励与学术兼职">Awards and Academic Service</h2>
+        <span data-en="Recognition and professional activities" data-zh="获奖与专业服务">Recognition and professional activities</span>
+      </div>
+
+      <div class="two-column-list">
+        <div class="list-panel">
+          <h3 data-en="Selected Awards" data-zh="代表性奖励">Selected Awards</h3>
+          <ul>
+            <li data-en="Best Presentation Award, IEEE INDIN, 2024"
+                data-zh="IEEE INDIN 最佳报告奖，2024">Best Presentation Award, IEEE INDIN, 2024</li>
+            <li data-en="Best Student Paper Award, IEEE HDIS, 2022"
+                data-zh="IEEE HDIS 最佳学生论文奖，2022">Best Student Paper Award, IEEE HDIS, 2022</li>
+            <li data-en="First-Class Graduate Scholarship, Dalian University of Technology"
+                data-zh="大连理工大学一级研究生奖学金">First-Class Graduate Scholarship, Dalian University of Technology</li>
+          </ul>
+        </div>
+
+        <div class="list-panel">
+          <h3 data-en="Academic Service" data-zh="学术兼职">Academic Service</h3>
+          <ul>
+            <li data-en="Reviewer for IEEE Robotics and Automation Letters"
+                data-zh="IEEE Robotics and Automation Letters 审稿人">Reviewer for IEEE Robotics and Automation Letters</li>
+            <li data-en="Reviewer for ISA Transactions"
+                data-zh="ISA Transactions 审稿人">Reviewer for ISA Transactions</li>
+            <li data-en="Reviewer for Journal of Risk and Reliability"
+                data-zh="Journal of Risk and Reliability 审稿人">Reviewer for Journal of Risk and Reliability</li>
+            <li data-en="Research in robotics, vehicle control and hybrid-drive systems"
+                data-zh="长期从事机器人、车辆控制与复合驱动系统研究">Research in robotics, vehicle control and hybrid-drive systems</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>© <span id="year"></span> Shaoxun Liu · </span>
+    <span data-en="Hosted with GitHub Pages" data-zh="由 GitHub Pages 托管">Hosted with GitHub Pages</span>
+  </footer>
+
+  <script>
+    const translations = document.querySelectorAll("[data-en][data-zh]");
+    const languageButtons = document.querySelectorAll("[data-lang]");
+    const navLinks = document.getElementById("navLinks");
+    const menuToggle = document.getElementById("menuToggle");
+
+    function setLanguage(language) {
+      document.documentElement.lang = language === "zh" ? "zh-CN" : "en";
+      translations.forEach((element) => {
+        element.textContent = element.dataset[language];
+      });
+      languageButtons.forEach((button) => {
+        button.classList.toggle("active", button.dataset.lang === language);
+      });
+      localStorage.setItem("homepageLanguage", language);
+    }
+
+    languageButtons.forEach((button) => {
+      button.addEventListener("click", () => setLanguage(button.dataset.lang));
+    });
+
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("open");
+    });
+
+    navLinks.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => navLinks.classList.remove("open"));
+    });
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+    setLanguage(localStorage.getItem("homepageLanguage") || "en");
+  </script>
 </body>
 </html>
